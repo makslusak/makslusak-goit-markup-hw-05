@@ -22,11 +22,11 @@
                     <a href="./" class="links logo-link">Web<span class="logo-studio">studio</span>
                     </a>
                     <ul class="header__nav-list">
-                        <li class="header__nav-item">
-                            <a href="./" class="links header__nav-link">Студія</a>
+                        <li class="header__nav-item ">
+                            <a href="./" class="links header__nav-link curent-link">Студія</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="./portfolio.html" class="links header__nav-link curent-link">Портфоліо</a>
+                            <a href="./portfolio.html" class="links header__nav-link ">Портфоліо</a>
                         </li>
                         <li class="header__nav-item">
                             <a href="" class="links header__nav-link">Контакти</a>
@@ -56,8 +56,8 @@
         <main>
             <!--Order service==================================== -->
             <section class="hero overlay">
-                <h1 class="hero__title">Ефективні рішення для <br/> вашого бізнесу</h1>
-                <button type="button" class="hero__button">Замовити послугу</button>
+                <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+                <button type="button" class="hero__button" data-modal-open>Замовити послугу</button>
             </section>
             <!--Hilites========================================== -->
             <section class="section">
@@ -116,18 +116,30 @@
                 <h2 class="tasks__title titles">Чим ми займаємося</h2>
                 <ul class="tasks__list lists">
                     <li class="tasks__item">
-                        <img src="./images/box1.jpg" alt="Розробка програмного забезпечення" width="370"/>
+                        <div class="tasks__overlay">
+                            <h3 class="tasks__overlay-title">Десктопні додатки</h3>
+                        </div>
+                        <img class="tasks__img" src="./images/box1.jpg" alt="Розробка програмного забезпечення" width="370"/>
+                        
                     </li>
                     <li class="tasks__item">
-                        <img src="./images/img.jpg" alt="Тестування мобільного додатку" width="370"/>
+                        <div class="tasks__overlay">
+                            <h3 class="tasks__overlay-title">Мобільні додатки</h3>
+                        </div>
+                        <img class="tasks__img" src="./images/img.jpg" alt="Тестування мобільного додатку" width="370"/>
+                        
                     </li>
                     <li class="tasks__item">
-                        <img src="./images/img(1).jpg" alt="Робота з кольором" width="370"/>
+                        <div class="tasks__overlay">
+                            <h3 class="tasks__overlay-title">Дизайнерські рішення</h3>
+                        </div>
+                        <img class="tasks__img" src="./images/img(1).jpg" alt="Робота з кольором" width="370"/>
+                        
                     </li>
                 </ul>
             </section>
             <!--Team============================================ -->
-            <section class="team__section section">
+            <section class="section team__section">
                 <div class="container">
                     <h2 class="team__title titles">Наша команда</h2>
                     <ul class="lists team__list">
@@ -345,5 +357,17 @@
                 </div>
             </div>
         </footer>
+        <!-- Modal============================================ -->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="closebtn" type="button" data-modal-close>
+                    <svg class="closebtn-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#closebtn"></use>
+                    </svg>
+                </button>
+                
+            </div>
+        </div>
+<script src="./js/modal.js"></script>
     </body>
 </html>
